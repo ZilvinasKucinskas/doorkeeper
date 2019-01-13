@@ -11,6 +11,7 @@ rvm:
   - 2.6
 
 before_install:
+  - "find /home/travis/.rvm/rubies -wholename '*default/bundler-*.gemspec' -delete"
   - gem install bundler -v '~> 1.10'
 
 gemfile:
